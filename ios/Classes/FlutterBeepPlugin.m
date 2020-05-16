@@ -15,6 +15,8 @@
     NSNumber *soundId = (NSNumber *)call.arguments[@"soundId"];
     AudioServicesPlaySystemSound([soundId integerValue]);
     result(nil);
+  } else if ([@"stopSysSound" isEqualToString:call.method]) {
+    result(nil);
   } else {
     result(FlutterMethodNotImplemented);
   }
